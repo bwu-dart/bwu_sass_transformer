@@ -5,7 +5,7 @@ import 'package:unittest/unittest.dart';
 import 'package:mock/mock.dart';
 import 'package:barback/barback.dart';
 import 'package:sass/sass.dart';
-import 'package:sass/inlined_sass_transformer.dart';
+//import 'package:sass/inlined_sass_transformer.dart';
 
 void main() => group("InlinedSassTransformer", () {
   InlinedSassTransformer createTransformer({Map configuration, Sass sass}) {

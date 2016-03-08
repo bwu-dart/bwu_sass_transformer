@@ -25,6 +25,7 @@ class Sass {
       StringBuffer errors = new StringBuffer();
       StringBuffer output = new StringBuffer();
 
+
       process.stdin.write(content);
 
       // These writeln -calls are needed or the transformer will produce empty output on Windows.
