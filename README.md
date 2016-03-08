@@ -68,3 +68,21 @@ To enable the use of inlined transformer, use `sass/inlined_sass_transformer` as
 ## Current limitations
 
 - UTF8-encoding is assumed for all input files.
+
+
+## executable
+
+Add this script to your path
+
+#!/bin/sh
+IN_FILE=$1 # needs to be the first argument
+#OUT_FILE=${IN_FILE%.scss}.css
+echo File: ${IN_FILE} ==\> ${OUT_FILE} 
+#shift
+docker run --rm -i -v $(pwd):/prj \
+  -v ${HOME}/.pub-cache:${HOME}/.pub-cache \
+  -v ${HOME}/dart/bwu_ng_elements/lib:/bwu_ng_elements \
+  -w=/prj zoechi/dart-sass \
+  node-sass \
+  --importer=/usr/local/lib/node_modules/bwu_dart_node_sass_packages_importer/src/index.js 
+# $@ ${IN_FILE} ${OUT_FILE}

@@ -1,3 +1,5 @@
-.idea
-packages
+.idea/
+**/packages/
+.packages
 pubspec.lock
+
